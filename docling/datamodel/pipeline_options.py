@@ -30,7 +30,7 @@ class OcrOptions(BaseModel):
 
 class EasyOcrOptions(OcrOptions):
     kind: Literal["easyocr"] = "easyocr"
-    lang: List[str] = ["fr", "de", "es", "en"]
+    lang: List[str] = ["fr", "de", "es", "en", 'ru']
     use_gpu: bool = True  # same default as easyocr.Reader
     model_storage_directory: Optional[str] = None
     download_enabled: bool = True  # same default as easyocr.Reader
@@ -43,7 +43,7 @@ class EasyOcrOptions(OcrOptions):
 
 class TesseractCliOcrOptions(OcrOptions):
     kind: Literal["tesseract"] = "tesseract"
-    lang: List[str] = ["fra", "deu", "spa", "eng"]
+    lang: List[str] = ["fra", "deu", "spa", "eng", "rus"]
     tesseract_cmd: str = "tesseract"
     path: Optional[str] = None
 
@@ -54,7 +54,7 @@ class TesseractCliOcrOptions(OcrOptions):
 
 class TesseractOcrOptions(OcrOptions):
     kind: Literal["tesserocr"] = "tesserocr"
-    lang: List[str] = ["fra", "deu", "spa", "eng"]
+    lang: List[str] = ["fra", "deu", "spa", "eng", "rus"]
     path: Optional[str] = None
 
     model_config = ConfigDict(
