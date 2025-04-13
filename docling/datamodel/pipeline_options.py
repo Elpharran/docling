@@ -155,7 +155,7 @@ class EasyOcrOptions(OcrOptions):
     """Options for the EasyOCR engine."""
 
     kind: ClassVar[Literal["easyocr"]] = "easyocr"
-    lang: List[str] = ["fr", "de", "es", "en"]
+    lang: List[str] = ["fr", "de", "es", "en", 'ru']
 
     use_gpu: Optional[bool] = None
 
@@ -188,7 +188,7 @@ class TesseractOcrOptions(OcrOptions):
     """Options for the Tesseract engine."""
 
     kind: ClassVar[Literal["tesserocr"]] = "tesserocr"
-    lang: List[str] = ["fra", "deu", "spa", "eng"]
+    lang: List[str] = ["fra", "deu", "spa", "eng", 'rus']
     path: Optional[str] = None
 
     model_config = ConfigDict(
