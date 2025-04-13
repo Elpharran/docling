@@ -155,7 +155,7 @@ class EasyOcrOptions(OcrOptions):
     """Options for the EasyOCR engine."""
 
     kind: ClassVar[Literal["easyocr"]] = "easyocr"
-    lang: List[str] = ["fr", "de", "es", "en", 'ru', "rs_cyrillic"]
+    lang: List[str] = ["ru","rs_cyrillic","be","bg","uk","mn","en"]
 
     use_gpu: Optional[bool] = None
 
